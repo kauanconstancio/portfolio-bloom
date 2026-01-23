@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { education, experiences, projects, tech } from "@/components/portfolio/data";
+import { CertificatesGallery } from "@/components/portfolio/CertificatesGallery";
 import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 
 const Index = () => {
@@ -238,18 +239,10 @@ const Index = () => {
               id="certificados"
               eyebrow="CERTIFICAÇÕES"
               title="Certificados"
-              description="Posso listar/organizar seus certificados (ex: por plataforma e data)."
+              description="Uma galeria com seus certificados (clique para ampliar e navegar)."
             >
               <TiltCard>
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold">Galeria de certificados</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      Me diga se você quer incluir imagens aqui (e quais), que eu monto uma galeria bonita.
-                    </p>
-                  </div>
-                  <Badge variant="secondary">23 itens (referência do site atual)</Badge>
-                </div>
+                <CertificatesGallery />
               </TiltCard>
             </Section>
 
