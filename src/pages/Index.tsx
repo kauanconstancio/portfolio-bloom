@@ -1,12 +1,13 @@
 import { ParallaxBackdrop } from "@/components/portfolio/ParallaxBackdrop";
 import { Section } from "@/components/portfolio/Section";
 import { TiltCard } from "@/components/portfolio/TiltCard";
+import { ProjectsGrid } from "@/components/portfolio/ProjectsGrid";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { education, experiences, projects, tech } from "@/components/portfolio/data";
 import { CertificatesGallery } from "@/components/portfolio/CertificatesGallery";
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Index = () => {
   return (
@@ -201,47 +202,7 @@ const Index = () => {
               title="Projetos em destaque"
               description="Alguns projetos para ver minhas escolhas de UI, organização e stack."
             >
-              <div className="grid gap-6 lg:grid-cols-2">
-                {projects.map((p) => (
-                  <TiltCard key={p.title}>
-                    <div className="flex h-full flex-col gap-4">
-                      <div className="flex items-start justify-between gap-4">
-                        <h3 className="text-xl font-semibold">{p.title}</h3>
-                        <div className="flex items-center gap-2">
-                          {p.liveUrl ? (
-                            <a
-                              className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-                              href={p.liveUrl}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              Ver <ExternalLink className="h-4 w-4" />
-                            </a>
-                          ) : null}
-                          {p.githubUrl ? (
-                            <a
-                              className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-                              href={p.githubUrl}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              GitHub <Github className="h-4 w-4" />
-                            </a>
-                          ) : null}
-                        </div>
-                      </div>
-                      <p className="text-sm leading-relaxed text-muted-foreground">{p.description}</p>
-                      <div className="mt-auto flex flex-wrap gap-2">
-                        {p.stack.map((s) => (
-                          <Badge key={s} variant="secondary">
-                            {s}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                  </TiltCard>
-                ))}
-              </div>
+              <ProjectsGrid projects={projects} />
             </Section>
 
             <Section
