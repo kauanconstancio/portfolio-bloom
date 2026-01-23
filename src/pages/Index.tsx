@@ -17,7 +17,16 @@ const Index = () => {
         <header className="relative">
           <div className="container py-8">
             <nav className="flex items-center justify-between gap-6">
-              <a href="#" className="text-sm font-semibold tracking-tight">
+              <a href="#" className="flex items-center gap-2 text-sm font-semibold tracking-tight">
+                <img
+                  src="/favicon.png"
+                  width={20}
+                  height={20}
+                  alt="Ícone do portfólio"
+                  className="h-5 w-5 rounded-[0.25rem] border border-border bg-card"
+                  loading="eager"
+                  decoding="async"
+                />
                 KauanConstancio
               </a>
               <div className="hidden items-center gap-6 sm:flex">
