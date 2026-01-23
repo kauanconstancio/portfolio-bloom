@@ -53,36 +53,53 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Typography */
+    --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+      "Segoe UI Emoji";
+
+    /* Extra design tokens (HSL) */
+    --primary-glow: 141 76% 56%;
+    --surface: 222 35% 10%;
+    --surface-2: 222 28% 13%;
+    --soft: 218 20% 62%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* Neo-tech editorial (default for the portfolio UI) */
+    --background: 224 38% 6%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222 35% 10%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 35% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* neon-lime */
+    --primary: 141 76% 56%;
+    --primary-foreground: 224 38% 6%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 222 28% 13%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 222 28% 13%;
+    --muted-foreground: 218 20% 62%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 222 35% 10%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 222 22% 18%;
+    --input: 222 22% 18%;
+    --ring: 141 76% 56%;
+
+    --primary-glow: 141 76% 56%;
+    --surface: 222 35% 10%;
+    --surface-2: 222 28% 13%;
+    --soft: 218 20% 62%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +117,24 @@ All colors MUST be HSL.
   }
 
   body {
+    font-family: var(--font-sans);
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image: linear-gradient(to right, hsl(var(--border) / 0.6) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.6) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse at top, black 40%, transparent 70%);
+  }
+
+  .bg-noise {
+    background-image: url("/placeholder.svg");
+    background-size: 220px 220px;
+    opacity: 0.08;
+    mix-blend-mode: overlay;
+    pointer-events: none;
   }
 }
