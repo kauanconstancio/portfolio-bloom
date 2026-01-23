@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { education, experiences, projects, tech } from "@/components/portfolio/data";
 import { CertificatesGallery } from "@/components/portfolio/CertificatesGallery";
+import { AboutSection } from "@/components/portfolio/AboutSection";
 import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 
 const Index = () => {
@@ -138,6 +139,8 @@ const Index = () => {
                 </div>
               </div>
             </section>
+
+            <AboutSection />
 
             <Section
               id="competencias"
