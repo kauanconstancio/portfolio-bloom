@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { education, experiences, projects, tech } from "@/components/portfolio/data";
 import { CertificatesGallery } from "@/components/portfolio/CertificatesGallery";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const Index = () => {
@@ -285,6 +286,8 @@ const Index = () => {
             </p>
           </div>
         </footer>
+
+        <ScrollToTop />
       </div>
     </div>
   );
