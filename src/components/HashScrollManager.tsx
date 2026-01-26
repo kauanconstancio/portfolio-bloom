@@ -7,6 +7,17 @@ function unlockScrollIfStuck() {
   const hasOpenDialog = !!document.querySelector('[role="dialog"][data-state="open"]');
   if (hasOpenDialog) return;
 
+  const bodyStyle = window.getComputedStyle(document.body);
+  const htmlStyle = window.getComputedStyle(document.documentElement);
+  const isLocked =
+    document.body.hasAttribute("data-scroll-locked") ||
+    document.documentElement.hasAttribute("data-scroll-locked") ||
+    bodyStyle.overflow === "hidden" ||
+    htmlStyle.overflow === "hidden" ||
+    bodyStyle.position === "fixed";
+
+  if (!isLocked) return;
+
   document.body.removeAttribute("data-scroll-locked");
   document.documentElement.removeAttribute("data-scroll-locked");
 
@@ -21,6 +32,32 @@ function unlockScrollIfStuck() {
 
 export function HashScrollManager() {
   const location = useLocation();
+
+  useEffect(() => {
+    // Observa alterações de scroll-lock e repara automaticamente (caso algum modal deixe preso).
+    const observer = new MutationObserver(() => {
+      unlockScrollIfStuck();
+    });
+
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["style", "data-scroll-locked"],
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["style", "data-scroll-locked"],
+    });
+
+    // Fallback: alguns navegadores mudam hash sem disparar updates esperados.
+    const onHashChange = () => unlockScrollIfStuck();
+    window.addEventListener("hashchange", onHashChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("hashchange", onHashChange);
+    };
+  }, []);
 
   useEffect(() => {
     // Em mudanças de hash, tentamos garantir que nada ficou travando o scroll.
