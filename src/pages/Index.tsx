@@ -18,7 +18,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 const Index = () => {
   return (
     <div className="relative min-h-screen bg-background text-foreground dark">
-      <ParallaxBackdrop className="pointer-events-none absolute inset-0" />
+      <ParallaxBackdrop className="pointer-events-none absolute inset-0 overflow-hidden" />
 
       <header className="">
         <div className="container py-8">
