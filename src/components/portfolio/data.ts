@@ -97,6 +97,63 @@ export const projects: Project[] = [
     githubUrl:
       "https://github.com/kauanconstancio/L-gica-com-JS/tree/main/parte-2/numero%20secreto%202.0",
   },
+  {
+    title: "Calculadora de Médias",
+    description: "Calculadora para média de notas com interface limpa e funcional.",
+    stack: ["HTML", "CSS", "JavaScript", "Sass"],
+    imageSrc: "/assets/projects-img/calculadora-medias.png",
+    gallery: ["/assets/projects-img/calculadora-medias.png"],
+    details: {
+      overview:
+        "Ferramenta para calcular médias de notas com validação e feedback visual.",
+      highlights: [
+        "Interface simples e objetiva",
+        "Validação de entrada",
+        "Feedback visual de aprovação/reprovação",
+      ],
+      learnings: ["Manipulação do DOM", "Validação de formulários", "Estilização com Sass"],
+    },
+    liveUrl: "https://calculador-de-medias-zeta.vercel.app/",
+    githubUrl: "https://github.com/kauanconstancio/calculador-de-medias",
+  },
+  {
+    title: "Cards de Precificação",
+    description: "Componente de cards com alternância de planos e destaque visual.",
+    stack: ["HTML", "CSS", "JavaScript", "Sass"],
+    imageSrc: "/assets/projects-img/cards-precificacao.png",
+    gallery: ["/assets/projects-img/cards-precificacao.png"],
+    details: {
+      overview:
+        "Cards de precificação com toggle entre planos mensais e anuais.",
+      highlights: [
+        "Alternância de preços com animação",
+        "Design responsivo",
+        "Destaque do plano recomendado",
+      ],
+      learnings: ["CSS Grid/Flexbox", "Animações CSS", "Interatividade com JS"],
+    },
+    liveUrl: "https://cards-de-precifica-o-com-altern-ncia.vercel.app/",
+    githubUrl: "https://github.com/kauanconstancio/cards-de-precifica--o-com-altern-ncia",
+  },
+  {
+    title: "Solvoo - Ecommerce de Serviços",
+    description: "Plataforma de e-commerce focada em serviços com UI moderna.",
+    stack: ["TypeScript", "React", "Vite", "Tailwind", "Shadcn", "Lovable"],
+    imageSrc: "/assets/projects-img/solvoo.png",
+    gallery: ["/assets/projects-img/solvoo.png"],
+    details: {
+      overview:
+        "E-commerce de serviços com design moderno, catálogo e integração de pagamento.",
+      highlights: [
+        "UI/UX moderna e responsiva",
+        "Catálogo de serviços organizado",
+        "Integração com sistema de pagamento",
+      ],
+      learnings: ["Arquitetura de e-commerce", "Componentização avançada", "Integração de APIs"],
+    },
+    liveUrl: "https://id-preview--4c106cc5-8d78-4aa1-aad7-d84cfbb2d59c.lovable.app/",
+    githubUrl: "https://github.com/kauanconstancio/solvoo_2.0",
+  },
 ];
 
 export const tech: string[] = [
