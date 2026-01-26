@@ -55,8 +55,9 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Typography */
-    --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
-      "Segoe UI Emoji";
+    --font-sans:
+      ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+      Arial, "Apple Color Emoji", "Segoe UI Emoji";
 
     /* Extra design tokens (HSL) */
     --primary-glow: 141 76% 56%;
@@ -124,7 +125,8 @@ All colors MUST be HSL.
 
 @layer utilities {
   .bg-grid {
-    background-image: linear-gradient(to right, hsl(var(--border) / 0.6) 1px, transparent 1px),
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.6) 1px, transparent 1px),
       linear-gradient(to bottom, hsl(var(--border) / 0.6) 1px, transparent 1px);
     background-size: 64px 64px;
     mask-image: radial-gradient(ellipse at top, black 40%, transparent 70%);
@@ -136,5 +138,12 @@ All colors MUST be HSL.
     opacity: 0.08;
     mix-blend-mode: overlay;
     pointer-events: none;
+  }
+}
+
+@layer base {
+  html {
+    /* Prevent horizontal scroll at the root level */
+    overflow-x: hidden;
   }
 }
