@@ -93,5 +93,6 @@ All colors MUST be HSL.
   html {
     /* Prevent horizontal scroll at the root level */
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 }
