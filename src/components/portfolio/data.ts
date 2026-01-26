@@ -117,6 +117,7 @@ export const tech: string[] = [
   "TypeScript",
   "Lovable",
   "Claude",
+  "Google Antigravity",
 ];
 
 export type Experience = {
