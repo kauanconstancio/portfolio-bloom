@@ -13,7 +13,7 @@ import {
 } from "@/components/portfolio/data";
 import { CertificatesGallery } from "@/components/portfolio/CertificatesGallery";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, MessageSquare } from "lucide-react";
 
 const Index = () => {
   return (
@@ -110,9 +110,9 @@ const Index = () => {
                     <a
                       className="rounded-md border border-border/70 bg-card/60 p-2 text-muted-foreground backdrop-blur hover:text-foreground"
                       href="#contato"
-                      aria-label="E-mail"
+                      aria-label="Message"
                     >
-                      <Mail className="h-4 w-4" />
+                      <MessageSquare className="h-4 w-4" />
                     </a>
                     <a
                       className="rounded-md border border-border/70 bg-card/60 p-2 text-muted-foreground backdrop-blur hover:text-foreground"
@@ -268,7 +268,13 @@ const Index = () => {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button asChild>
-                    <a href="mailto:seuemail@exemplo.com">Enviar e-mail</a>
+                    <a
+                      href="https://wa.me/5527995323227"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Entrar em Contato
+                    </a>
                   </Button>
                   <Button asChild variant="secondary">
                     <a
@@ -297,9 +303,11 @@ const Index = () => {
                   </a>
                   <a
                     className="inline-flex items-center justify-between rounded-md border border-border/70 bg-card/60 px-3 py-2 text-sm text-muted-foreground backdrop-blur hover:text-foreground"
-                    href="mailto:seuemail@exemplo.com"
+                    href="https://wa.me/5527995323227"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    E-mail <Mail className="h-4 w-4" />
+                    Contato <MessageSquare className="h-4 w-4" />
                   </a>
                   <a
                     className="inline-flex items-center justify-between rounded-md border border-border/70 bg-card/60 px-3 py-2 text-sm text-muted-foreground backdrop-blur hover:text-foreground"
