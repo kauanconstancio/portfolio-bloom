@@ -5,7 +5,12 @@ import { ProjectsGrid } from "@/components/portfolio/ProjectsGrid";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { education, experiences, projects, tech } from "@/components/portfolio/data";
+import {
+  education,
+  experiences,
+  projects,
+  tech,
+} from "@/components/portfolio/data";
 import { CertificatesGallery } from "@/components/portfolio/CertificatesGallery";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Github, Linkedin, Mail } from "lucide-react";
@@ -14,12 +19,15 @@ const Index = () => {
   return (
     <div className="dark min-h-screen bg-background text-foreground">
       <div className="relative overflow-x-hidden">
-        <ParallaxBackdrop className="absolute inset-0" />
+        <ParallaxBackdrop className="pointer-events-none absolute inset-0" />
 
-        <header className="relative">
+        <header className="">
           <div className="container py-8">
             <nav className="flex items-center justify-between gap-6">
-              <a href="#" className="flex items-center gap-2 text-sm font-semibold tracking-tight">
+              <a
+                href="#"
+                className="flex items-center gap-2 text-sm font-semibold tracking-tight"
+              >
                 <img
                   src="/favicon.png"
                   width={20}
@@ -32,16 +40,28 @@ const Index = () => {
                 KauanConstancio
               </a>
               <div className="hidden items-center gap-6 sm:flex">
-                <a className="text-sm text-muted-foreground hover:text-foreground" href="#tecnologias">
+                <a
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                  href="#tecnologias"
+                >
                   Tecnologias
                 </a>
-                <a className="text-sm text-muted-foreground hover:text-foreground" href="#projetos">
+                <a
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                  href="#projetos"
+                >
                   Projetos
                 </a>
-                <a className="text-sm text-muted-foreground hover:text-foreground" href="#certificados">
+                <a
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                  href="#certificados"
+                >
                   Certificados
                 </a>
-                <a className="text-sm text-muted-foreground hover:text-foreground" href="#contato">
+                <a
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                  href="#contato"
+                >
                   Contato
                 </a>
               </div>
@@ -66,8 +86,9 @@ const Index = () => {
                     Front End Developer
                   </h1>
                   <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                    Nascido em Vitória/ES, apaixonado por tecnologia e por entender como as coisas funcionam.
-                    Construo interfaces rápidas, claras e com identidade.
+                    Nascido em Vitória/ES, apaixonado por tecnologia e por
+                    entender como as coisas funcionam. Construo interfaces
+                    rápidas, claras e com identidade.
                   </p>
 
                   <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -114,18 +135,24 @@ const Index = () => {
                         STATUS
                       </p>
                       <div className="space-y-2">
-                        <p className="text-sm text-muted-foreground">Foco atual</p>
-                        <p className="text-lg font-semibold">Interfaces & Experiência do Usuário</p>
+                        <p className="text-sm text-muted-foreground">
+                          Foco atual
+                        </p>
+                        <p className="text-lg font-semibold">
+                          Interfaces & Experiência do Usuário
+                        </p>
                       </div>
                       <Separator />
                       <div className="space-y-2">
                         <p className="text-sm text-muted-foreground">Stack</p>
                         <div className="flex flex-wrap gap-2">
-                          {["React", "TypeScript", "Tailwind", "Shadcn"].map((t) => (
-                            <Badge key={t} variant="secondary">
-                              {t}
-                            </Badge>
-                          ))}
+                          {["React", "TypeScript", "Tailwind", "Shadcn"].map(
+                            (t) => (
+                              <Badge key={t} variant="secondary">
+                                {t}
+                              </Badge>
+                            ),
+                          )}
                         </div>
                       </div>
                     </div>
@@ -152,12 +179,16 @@ const Index = () => {
             <div className="grid gap-6 lg:grid-cols-2">
               <TiltCard>
                 <div className="space-y-3">
-                  <p className="text-xs font-medium tracking-[0.22em] text-muted-foreground">FORMAÇÃO</p>
+                  <p className="text-xs font-medium tracking-[0.22em] text-muted-foreground">
+                    FORMAÇÃO
+                  </p>
                   <h3 className="text-xl font-semibold">{education.course}</h3>
                   <p className="text-sm text-muted-foreground">
                     {education.school} • {education.status}
                   </p>
-                  <p className="text-sm leading-relaxed text-muted-foreground">{education.summary}</p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {education.summary}
+                  </p>
                 </div>
               </TiltCard>
 
@@ -168,11 +199,15 @@ const Index = () => {
                       <div className="flex items-start justify-between gap-4">
                         <div>
                           <h3 className="text-xl font-semibold">{exp.role}</h3>
-                          <p className="text-sm text-muted-foreground">{exp.company}</p>
+                          <p className="text-sm text-muted-foreground">
+                            {exp.company}
+                          </p>
                         </div>
                         <Badge variant="secondary">{exp.period}</Badge>
                       </div>
-                      <p className="text-sm leading-relaxed text-muted-foreground">{exp.summary}</p>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        {exp.summary}
+                      </p>
                     </div>
                   </TiltCard>
                 ))}
@@ -229,15 +264,19 @@ const Index = () => {
                 <div className="space-y-3">
                   <h3 className="text-xl font-semibold">Mensagem rápida</h3>
                   <p className="text-sm text-muted-foreground">
-                    Para essa primeira versão, deixei o contato direto. Se preferir, posso adicionar um
-                    formulário com validação.
+                    Para essa primeira versão, deixei o contato direto. Se
+                    preferir, posso adicionar um formulário com validação.
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Button asChild>
                       <a href="mailto:seuemail@exemplo.com">Enviar e-mail</a>
                     </Button>
                     <Button asChild variant="secondary">
-                      <a href="https://github.com/kauanconstancio/portfolio" target="_blank" rel="noreferrer">
+                      <a
+                        href="https://github.com/kauanconstancio/portfolio"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         Ver repositório
                       </a>
                     </Button>
@@ -282,7 +321,8 @@ const Index = () => {
           <div className="container">
             <Separator />
             <p className="mt-6 text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Kauan Constancio • Construído com React + Tailwind.
+              © {new Date().getFullYear()} Kauan Constancio • Construído com
+              React + Tailwind.
             </p>
           </div>
         </footer>
