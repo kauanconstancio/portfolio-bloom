@@ -145,13 +145,18 @@ const Index = () => {
                     <div className="space-y-2">
                       <p className="text-sm text-muted-foreground">Stack</p>
                       <div className="flex flex-wrap gap-2">
-                        {["React", "TypeScript", "Tailwind", "Shadcn"].map(
-                          (t) => (
-                            <Badge key={t} variant="secondary">
-                              {t}
-                            </Badge>
-                          ),
-                        )}
+                        {[
+                          "React",
+                          "TypeScript",
+                          "Tailwind",
+                          "Shadcn",
+                          "JavaScript",
+                          "NextJS",
+                        ].map((t) => (
+                          <Badge key={t} variant="secondary">
+                            {t}
+                          </Badge>
+                        ))}
                       </div>
                     </div>
                   </div>
