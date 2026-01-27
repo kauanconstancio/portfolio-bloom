@@ -16,7 +16,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Chat Bot AI (Open AI)",
-    description: "Chatbot com UI moderna e foco em produtividade, feito com Next.js.",
+    description:
+      "Chatbot com UI moderna e foco em produtividade, feito com Next.js.",
     stack: ["Next.js", "TypeScript", "Tailwind", "Shadcn"],
     imageSrc: "/assets/projects-img/chat-bot.png",
     gallery: ["/assets/projects-img/chat-bot.png"],
@@ -37,7 +38,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/kauanconstancio/chat-bot",
   },
   {
-    title: "Portfolio", 
+    title: "Portfolio",
     description: "Meu portfólio com projetos, certificados e contato.",
     stack: ["React", "Vite", "Tailwind", "Lucide"],
     imageSrc: "/assets/projects-img/portfolio.png",
@@ -56,11 +57,12 @@ export const projects: Project[] = [
       ],
     },
     liveUrl: "https://portfolio-five-eosin-41.vercel.app/",
-    githubUrl: "https://github.com/kauanconstancio/portfolio",
+    githubUrl: "https://github.com/kauanconstancio/portfolio-bloom",
   },
   {
     title: "Biblioteca de Jogos",
-    description: "Catálogo de jogos com interface simples e foco em organização.",
+    description:
+      "Catálogo de jogos com interface simples e foco em organização.",
     stack: ["HTML", "CSS", "JavaScript", "Sass"],
     imageSrc: "/assets/projects-img/biblioteca-de-jogos.png",
     gallery: ["/assets/projects-img/biblioteca-de-jogos.png"],
@@ -72,10 +74,15 @@ export const projects: Project[] = [
         "Estilização com foco em clareza",
         "Boas práticas de CSS/Sass",
       ],
-      learnings: ["Responsividade", "Organização de CSS", "Estados simples em JS"],
+      learnings: [
+        "Responsividade",
+        "Organização de CSS",
+        "Estados simples em JS",
+      ],
     },
     liveUrl: "https://imerss-o-dev-alura-google-gemini.vercel.app/",
-    githubUrl: "https://github.com/kauanconstancio/Imersao-DEV-Alura-Google-Gemini",
+    githubUrl:
+      "https://github.com/kauanconstancio/Imersao-DEV-Alura-Google-Gemini",
   },
   {
     title: "Adivinhação de Números",
@@ -91,7 +98,11 @@ export const projects: Project[] = [
         "Feedback de acerto/erro",
         "Código direto e fácil de manter",
       ],
-      learnings: ["Lógica e controle de fluxo", "Feedback e UX", "Validações básicas"],
+      learnings: [
+        "Lógica e controle de fluxo",
+        "Feedback e UX",
+        "Validações básicas",
+      ],
     },
     liveUrl: "https://l-gica-com-js.vercel.app/",
     githubUrl:
@@ -99,7 +110,8 @@ export const projects: Project[] = [
   },
   {
     title: "Calculadora de Médias",
-    description: "Calculadora para média de notas com interface limpa e funcional.",
+    description:
+      "Calculadora para média de notas com interface limpa e funcional.",
     stack: ["HTML", "CSS", "JavaScript", "Sass"],
     imageSrc: "/assets/projects-img/calculadora-medias.png",
     gallery: ["/assets/projects-img/calculadora-medias.png"],
@@ -111,14 +123,19 @@ export const projects: Project[] = [
         "Validação de entrada",
         "Feedback visual de aprovação/reprovação",
       ],
-      learnings: ["Manipulação do DOM", "Validação de formulários", "Estilização com Sass"],
+      learnings: [
+        "Manipulação do DOM",
+        "Validação de formulários",
+        "Estilização com Sass",
+      ],
     },
     liveUrl: "https://calculador-de-medias-zeta.vercel.app/",
     githubUrl: "https://github.com/kauanconstancio/calculador-de-medias",
   },
   {
     title: "Cards de Precificação",
-    description: "Componente de cards com alternância de planos e destaque visual.",
+    description:
+      "Componente de cards com alternância de planos e destaque visual.",
     stack: ["HTML", "CSS", "JavaScript", "Sass"],
     imageSrc: "/assets/projects-img/cards-precificacao.png",
     gallery: ["/assets/projects-img/cards-precificacao.png"],
@@ -133,7 +150,8 @@ export const projects: Project[] = [
       learnings: ["CSS Grid/Flexbox", "Animações CSS", "Interatividade com JS"],
     },
     liveUrl: "https://cards-de-precifica-o-com-altern-ncia.vercel.app/",
-    githubUrl: "https://github.com/kauanconstancio/cards-de-precifica--o-com-altern-ncia",
+    githubUrl:
+      "https://github.com/kauanconstancio/cards-de-precifica--o-com-altern-ncia",
   },
   {
     title: "Solvoo - Ecommerce de Serviços",
@@ -149,9 +167,14 @@ export const projects: Project[] = [
         "Catálogo de serviços organizado",
         "Integração com sistema de pagamento",
       ],
-      learnings: ["Arquitetura de e-commerce", "Componentização avançada", "Integração de APIs"],
+      learnings: [
+        "Arquitetura de e-commerce",
+        "Componentização avançada",
+        "Integração de APIs",
+      ],
     },
-    liveUrl: "https://id-preview--4c106cc5-8d78-4aa1-aad7-d84cfbb2d59c.lovable.app/",
+    liveUrl:
+      "https://id-preview--4c106cc5-8d78-4aa1-aad7-d84cfbb2d59c.lovable.app/",
     githubUrl: "https://github.com/kauanconstancio/solvoo_2.0",
   },
 ];
