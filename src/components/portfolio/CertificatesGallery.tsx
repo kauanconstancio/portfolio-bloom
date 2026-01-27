@@ -49,7 +49,7 @@ export function CertificatesGallery({ className }: CertificatesGalleryProps) {
             onClick={() => openAt(i)}
             className={cn(
               "group relative overflow-hidden rounded-lg border bg-card/50 backdrop-blur",
-              "transition-colors hover:bg-card/70"
+              "transition-colors hover:bg-card/70",
             )}
           >
             <img
@@ -58,9 +58,9 @@ export function CertificatesGallery({ className }: CertificatesGalleryProps) {
               loading="lazy"
               className="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
             />
-            <div className="absolute inset-x-0 bottom-0 bg-background/70 p-2 backdrop-blur">
+            {/* <div className="absolute inset-x-0 bottom-0 bg-background/70 p-2 backdrop-blur">
               <p className="truncate text-xs text-muted-foreground">{c.title}</p>
-            </div>
+            </div> */}
           </button>
         ))}
       </div>
@@ -98,13 +98,25 @@ export function CertificatesGallery({ className }: CertificatesGalleryProps) {
 
               <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-background/80 px-4 py-3 backdrop-blur">
                 <div className="min-w-0">
-                  <p className="truncate text-sm text-muted-foreground">{current.title}</p>
+                  <p className="truncate text-sm text-muted-foreground">
+                    {current.title}
+                  </p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Button variant="secondary" size="icon" onClick={prev} aria-label="Anterior">
+                  <Button
+                    variant="secondary"
+                    size="icon"
+                    onClick={prev}
+                    aria-label="Anterior"
+                  >
                     <ChevronLeft className="h-4 w-4" />
                   </Button>
-                  <Button variant="secondary" size="icon" onClick={next} aria-label="Próximo">
+                  <Button
+                    variant="secondary"
+                    size="icon"
+                    onClick={next}
+                    aria-label="Próximo"
+                  >
                     <ChevronRight className="h-4 w-4" />
                   </Button>
                 </div>
