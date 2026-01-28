@@ -56,7 +56,7 @@ export const projects: Project[] = [
         "Componentes acessíveis com Radix/shadcn",
       ],
     },
-    liveUrl: "https://portfolio-five-eosin-41.vercel.app/",
+    liveUrl: "https://kauan-portfolio-taupe.vercel.app/",
     githubUrl: "https://github.com/kauanconstancio/portfolio-bloom",
   },
   {

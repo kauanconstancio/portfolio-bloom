@@ -13,7 +13,7 @@ import {
 } from "@/components/portfolio/data";
 import { CertificatesGallery } from "@/components/portfolio/CertificatesGallery";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { Github, Linkedin, Mail, MessageSquare } from "lucide-react";
+import { Github, Linkedin, MessageSquare } from "lucide-react";
 
 const Index = () => {
   return (
